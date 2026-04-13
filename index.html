@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Café artesanal de calidad premium. Inauguración próxima. Conoce nuestro menú y reserva tu visita.">
+    <meta name="keywords" content="café, cafetería, café artesanal, café premium, bebidas calientes">
+    <title>☕ Café Premium - Bienvenido a Nuestro Mundo</title>
+    
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+    <!-- NAV -->
+    <nav class="navbar navbar-expand-lg navbar-dark sticky-top" id="navbar">
+        <div class="container">
+            <a class="navbar-brand fw-bold" href="#inicio">☕ Café Premium</a>
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item"><a class="nav-link" href="#inicio">Inicio</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#menu">Menú</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#horarios">Horarios</a></li>
+                    <li class="nav-item"><a class="nav-link" href="#contacto">Contacto</a></li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <!-- HERO -->
+    <section id="inicio" class="hero min-vh-100 d-flex align-items-center justify-content-center text-center">
+        <div class="container">
+            <h1 class="display-3 fw-bold mb-4 fade-in">Bienvenido a Café Premium</h1>
+            <p class="lead mb-4 fade-in-slow">Descubre el arte del café artesanal en un ambiente acogedor y relajante</p>
+            <button class="btn btn-custom btn-lg fade-in-delay" data-bs-toggle="modal" data-bs-target="#menuModal">
+                Explorar Menú
+            </button>
+        </div>
+    </section>
+
+    <!-- MENU -->
+    <section id="menu" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Nuestra Carta</h2>
+            <div class="row g-4" id="menuContainer">
+                <!-- Cards generadas por JS -->
+            </div>
+        </div>
+    </section>
+
+    <!-- HORARIOS -->
+    <section id="horarios" class="py-5">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Horarios de Atención</h2>
+            <div class="row justify-content-center">
+                <div class="col-md-6">
+                    <div class="horarios-card p-4">
+                        <div class="horario-item mb-3">
+                            <strong>Lunes a Viernes:</strong> 7:00 AM - 8:00 PM
+                        </div>
+                        <div class="horario-item mb-3">
+                            <strong>Sábado:</strong> 8:00 AM - 9:00 PM
+                        </div>
+                        <div class="horario-item">
+                            <strong>Domingo:</strong> 9:00 AM - 7:00 PM
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CONTACTO -->
+    <section id="contacto" class="py-5 bg-light">
+        <div class="container">
+            <h2 class="text-center mb-5 section-title">Contacto</h2>
+            <div class="row">
+                <div class="col-md-6">
+                    <form id="contactForm" class="needs-validation">
+                        <div class="mb-3">
+                            <label for="nombre" class="form-label">Nombre</label>
+                            <input type="text" class="form-control" id="nombre" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="email" class="form-label">Correo</label>
+                            <input type="email" class="form-control" id="email" required>
+                        </div>
+                        <div class="mb-3">
+                            <label for="mensaje" class="form-label">Mensaje</label>
+                            <textarea class="form-control" id="mensaje" rows="4" required></textarea>
+                        </div>
+                        <button type="submit" class="btn btn-custom w-100">Enviar</button>
+                    </form>
+                </div>
+                <div class="col-md-6 d-flex align-items-center">
+                    <div>
+                        <h5 class="mb-3">📧 Correo de Contacto</h5>
+                        <p class="mb-4"><a href="mailto:hola@cafeteria" class="text-decoration-none">hola@cafeteria</a></p>
+                        <h5 class="mb-3">💬 Chatbot</h5>
+                        <p>Disponible en nuestro sitio para responder tus dudas</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- FOOTER -->
+    <footer class="bg-dark text-white text-center py-4">
+        <p>&copy; 2026 Café Premium. Todos los derechos reservados.</p>
+    </footer>
+
+    <!-- MODAL MENU -->
+    <div class="modal fade" id="menuModal" tabindex="-1">
+        <div class="modal-dialog">
+            <div class="modal-content">
+                <div class="modal-header border-0">
+                    <h5 class="modal-title" id="menuTitle">Nombre del Producto</h5>
+                    <button type="button" class="btn-close" data-bs-dismiss="modal"></button>
+                </div>
+                <div class="modal-body">
+                    <div id="loaderContainer" class="text-center mb-3" style="display:none;">
+                        <div class="spinner-border text-custom" role="status">
+                            <span class="visually-hidden">Cargando...</span>
+                        </div>
+                    </div>
+                    <div id="menuDescription"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="js/main.js"></script>
+</body>
+</html>
